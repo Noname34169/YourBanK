@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.scss'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -18,7 +19,7 @@ const Hero = () => {
                         
                         </h2>
                     <p className='hero__p'>At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
-                    <button className='hero__btn'>Open Account</button>
+                    <Link to={'/signup'} className='hero__btn'>Open Account</Link>
                 </div>
 
 

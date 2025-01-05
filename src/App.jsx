@@ -9,6 +9,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SingupPage'
+import AdminPanel from './pages/AdminPanel'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Route path='/security' element={<Security />}/>
       <Route path='/signup' element={<SignupPage />}/>
       <Route path='/login' element={<LoginPage />}/>
+      <Route path='/admin' element={<AdminPanel />}/>
     </Routes>
 
     <Footer />
