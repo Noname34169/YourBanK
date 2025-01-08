@@ -49,7 +49,7 @@ const Header = () => {
             </div>
 
             {/* Бургер-меню */}
-            <div className="header__burger" onClick={toggleMenu} data-aos="fade-down" data-aos-delay="1000">
+            <div className="header__burger" onClick={toggleMenu}>
               <img className='burger' src="/butger.svg" alt="Menu" />
             </div>
           </div>
