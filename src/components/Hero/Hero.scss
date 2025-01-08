@@ -4,6 +4,7 @@ padding: 100px auto;
 display: flex;
 gap: 120px;
 justify-content: space-between;
+z-index: 1;
 
 @media (max-width: 1200px) {
   flex-direction: column;
