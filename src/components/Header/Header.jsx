@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // AOS стили
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +11,14 @@ const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Длительность анимации
+      offset: 50,     // Отступ для начала анимации
+      easing: 'ease-in-out', // Стиль анимации
+    });
+  }, []);
 
   return (
     <header className="header">
@@ -24,7 +34,7 @@ const Header = () => {
           <div className="header__wrap">
             <div className={`header__header ${isMenuOpen ? 'active' : ''}`}>
               {/* Меню */}
-              <nav className="header__menu" data-aos="fade-down" data-aos-delay="400">
+              <nav className="header__menu">
                 <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
                 <Link to="/careers" onClick={() => setIsMenuOpen(false)}>Careers</Link>
                 <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>

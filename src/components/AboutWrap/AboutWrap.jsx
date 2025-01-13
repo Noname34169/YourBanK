@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
+import './AboutWrap.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
 const AboutWrap = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1200, easing: 'ease-out', once: true });
-  }, []);
+
 
   return (
     <>
